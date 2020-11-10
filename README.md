@@ -1,2 +1,2 @@
 # ruby-on-rails
-Avion school activities for ruby on rails
+Avion ruby on rails fundamentals
