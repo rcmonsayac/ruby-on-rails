@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   post '/articles' => 'articles#create', as: 'create_article'
   get '/articles/show/:id' => 'articles#show', as: 'show_article'
   get '/articles/edit/:id' => 'articles#edit', as: 'edit_article'
-  post '/articles/update' => 'articles#update', as: 'update_article'
+  put '/articles/update' => 'articles#update', as: 'update_article'
+  delete '/articles/delete/:id' => 'articles#delete', as: 'delete_article'
 
 
 end
