@@ -12,9 +12,9 @@ class ArticlesController < ApplicationController
     end
 
     def create
-        @article = Article.new #(article_params)
-        @article.title = params[:article][:title]
-        @article.body = params[:article][:body]
+        @article = Article.new(article_params)
+        # @article.title = params[:article][:title]
+        # @article.body = params[:article][:body]
         if @article.save
             redirect_to articles_path
         else
@@ -27,7 +27,8 @@ class ArticlesController < ApplicationController
     end
 
     def update
-        if Article.update(params[:article][:id], article_params)
+        @article = Article.find(params[:article][:id])  
+        if @article.update(article_params)
             redirect_to articles_path
         else
             render :edit
