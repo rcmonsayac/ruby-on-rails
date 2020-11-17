@@ -1,24 +1,27 @@
+<h1 class="title">Rails Blog</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="section">
+    <div class="articles-list">
+        <div>
+            <%= link_to '+ New Article', new_article_path, method: :get, class: 'button'%>
+        </div>
+
         <% @articles.each do |article| %>
-            <tr>
-                <td><%= link_to article.id, show_article_path(article.id) %></td>   
-                <td><%= article.title %></td>   
-                <td class="td-body"><%= article.body %></td>
-                <td><%= link_to 'Edit', edit_article_path(article.id) %></td>               
-            </tr>
-        <% end %>
-    </tbody>
-</table>
+            <div class="list-article-item">
+                <h3><%= link_to article.title, show_article_path(article.id), class: 'list-article-title' %></h3>
+                <p class="list-article-body">
+                    <%= article.body %>
+                </p>
 
-<%= link_to 'New Article', new_article_path %>
+                <%= link_to 'View', show_article_path(article.id), method: :get, class: 'button' %>           
+                <%= link_to 'Edit', edit_article_path(article.id), method: :get, class: 'button' %>           
+            </div>
+        <% end %>
+    </div>
+</div>
+
+
+
+
 
 

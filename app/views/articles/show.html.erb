@@ -1,3 +1,8 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
-<%=  link_to 'Back to Articles', articles_path %>
+<h1 class="title">Rails Blog > View</h1>
+
+
+<div class="section">
+    <h3 class="view-title"><%= @article.title %></h3>
+    <p class="view-body"><%= @article.body %></p>
+    <%=  link_to 'Back to Articles', articles_path, method: :get, class: 'button' %>
+</div>

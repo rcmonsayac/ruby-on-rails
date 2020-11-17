@@ -15,23 +15,133 @@
  */
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-table { 
-    margin: 10px;
-}
-
- td {
-     text-align: center;
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Roboto, "Arial Narrow", tahoma, verdana, arial, sans-serif;
  }
 
- .td-body {
-    width: 250px;
-    white-space: nowrap;
+ body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .container {
+     margin: 50px 0px;
+     width: 750px;
+     /* padding: 10px; */
+     background-color: #e7e7e7;
+     min-height: 600px;
+     border-radius: 10px;
+ }
+
+.title {
+    margin-bottom: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #212529;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.articles-list {
+    padding: 15px;
+}
+
+
+.list-article-item {
+    margin: 35px 0px;
+}
+
+.list-article-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #212529;
+    text-decoration: none;
+}
+
+.list-article-title:hover {
+    text-decoration: underline;
+}
+
+.list-article-body {
     overflow: hidden;
     text-overflow: ellipsis;
- }
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 4px 6px;
+    background-color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    color: #212529;
+    outline: none;
+    border-radius: 5px;
+    width: 60px;
+    border: none;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: #FFFFFF;
+    background-color: #212529;
+}
+
+
+.form-group {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text-input {
+    display: block;
+    width: 100%;
+    padding: 4px 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.text-area {
+    resize: none;
+    height: 400px;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.validations {
+    padding: 0px 10px;
+    color: #FF0000;
+}
+
+.section {
+    padding: 20px;
+}
+
+.view-title {
+
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.view-body {
+    margin-bottom: 10px;
+}
